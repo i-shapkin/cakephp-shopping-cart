@@ -2,7 +2,7 @@
 <html>
 <head>
     <?php echo $this->Html->charset(); ?>
-    <title><?php echo $__pageTitle; ?></title>
+    <title><?= $__pageTitle; ?></title>
     <?php
     echo $this->Html->meta('icon');
     echo $this->Html->css('bootstrap');

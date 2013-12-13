@@ -41,10 +41,17 @@ class AppController extends Controller {
 		//'DebugKit.Toolbar',
 		//'Security',
 	);
+    protected $_pageTitle = 'Главная страница';
+    protected $_pageTitlePrefix = 'Кочка | ';
+    protected $_pageHeader = false;
+    protected $_moderateFlash = false;
 
 ////////////////////////////////////////////////////////////
 
 	public function beforeFilter() {
+        //-> Layout data
+        $this->set('__pageTitle', $this->_pageTitlePrefix . $this->_pageTitle);
+        $this->set('__pageHeader', $this->_pageHeader);
 
 		$this->Auth->loginAction = array('controller' => 'users', 'action' => 'login', 'admin' => false);
 		$this->Auth->loginRedirect = array('controller' => 'orders', 'action' => 'index', 'admin' => true);
