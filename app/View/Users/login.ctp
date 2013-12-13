@@ -1,5 +1,5 @@
 <h1>Login</h1>
-
+<?=Security::hash('admin', null, true)?>
 <br />
 
 <div class="col-sm-3">

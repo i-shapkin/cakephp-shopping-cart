@@ -103,10 +103,6 @@ $(document).ready(function(){
 			<div id="msg"></div>
 			<br />
 
-			<div class="alert alert-danger">
-				<span class="glyphicon glyphicon-info-sign"></span> THIS IS A DEMO CAKEPHP SHOPPING CART !
-			</div>
-
 		</div>
 	</div>
 
