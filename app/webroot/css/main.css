@@ -94,6 +94,12 @@ h3{
 #page-content > div:first-child {
     padding: 0 0 0 10px;
 }
+#page-content .catalog h4 img{
+    margin: 0 10px 0 0;
+}
+#page-content .catalog h4{
+    font-weight: normal;
+}
 #categorytree {
     margin: 0;
 }
