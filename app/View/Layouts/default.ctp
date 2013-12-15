@@ -23,6 +23,7 @@
             </div>
             <div class="span9">
                 <div id="formsearch">
+                    <span class="search-icon"></span>
                     <?php echo $this->Form->create('Product', array('type' => 'GET', 'url' => array('controller' => 'products', 'action' => 'search'))); ?>
                     <?php echo $this->Form->input('search', array('label' => false, 'div' => false, 'class' => 'input-sm', 'autocomplete' => 'off')); ?>
                     <?php echo $this->Form->button('Найти', array('div' => false, 'class' => 'search-btn')); ?>
@@ -33,9 +34,6 @@
                 </div>
              </div>
         </div>
-<!--        --><?/*
-            pr($this->request);
-        */?>
         <div id="menu" class="row-fluid">
             <a class="span3" href="/catalog">Каталог товаров</a>
             <a class="span3" href="/sale">Акции и скидки</a>
@@ -43,7 +41,7 @@
             <a class="span2" href="/contacts">Контакты</a>
             <a class="span1" href="/wholesale">Опт</a>
         </div>
-        <div class="row-fluid page-content">
+        <div id="page-content" class="row-fluid">
             <? if($this->params['controller'] == 'pages' || $this->params['controller'] == 'products') : ?>
                 <div class="span3 catalog">
                     <h3>Каталог</h3>

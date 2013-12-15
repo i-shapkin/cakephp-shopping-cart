@@ -69,8 +69,8 @@ h3{
     padding: 20px 0;
     font-weight: normal;
 }
-.page-content {
-    padding: 0 10px;
+#page-content > div:first-child {
+    padding: 0 0 0 10px;
 }
 #categorytree {
     margin: 0;
@@ -78,11 +78,6 @@ h3{
 .categorytree a {
     font-size: 16px;
     font-weight: normal;
-}
-.categorytree > li > a{
-    color: #333;
-    line-height: 1;
-    display: block;
 }
 .categorytree li {
     list-style-type: none;
@@ -97,13 +92,29 @@ h3{
     margin: 20px 0;
     border-bottom: 1px solid #bfbfbf;
 }
+#categorytree > li {
+    position: relative;
+}
+#categorytree span.close-open{
+    width: 11px;
+    height: 9px;
+    background:  url('../img/arrows.png') center bottom no-repeat;
+    position: absolute;
+    right: 10px;
+    top: 20px;
+}
+#categorytree span.close-open.open{
+    background:  url('../img/arrows.png') center top no-repeat;
+}
 #categorytree ul {
     display: none;
 }
-#categorytree > li > a {
+#categorytree a.parent {
     padding: 15px 0;
     line-height: 1;
     border-top: 1px solid #bfbfbf;
+    color: #323232;
+    display: block;
 }
 #categorytree > li li a:hover {
     color: #0173b0;
@@ -117,6 +128,7 @@ h3{
     padding-bottom: 15px;
 }
 #formsearch {
+    position: relative;
     dislay: block;
     width: 260px;
     margin: 15px 0 0;
@@ -133,7 +145,7 @@ h3{
     padding: 5px;
     margin: 5px 0 0 5px;
     height: 10px;
-    color: #fff;
+    color: #323232;
     background: inherit;
     border: none;
     box-shadow: none;
@@ -152,4 +164,12 @@ h3{
     background-image: -webkit-linear-gradient(bottom, #a1c9e4 0%, #0e68b6 100%);
     background-image: -ms-linear-gradient(bottom, #a1c9e4 0%, #0e68b6 100%);
     background-image: linear-gradient(to bottom, #a1c9e4 0%, #0e68b6 100%);
+}
+.search-icon {
+    width: 17px;
+    height: 16px;
+    background: url('../img/search.png') center center no-repeat;
+    position: absolute;
+    top: 8px;
+    left: 10px;
 }
