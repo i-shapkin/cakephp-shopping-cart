@@ -13,7 +13,11 @@
     ?>
 </head>
 <body>
-<div id="head-line"></div>
+<div id="head-line">
+    <div class="reg">
+        <a href="/registration">Регистрация</a>
+    </div>
+</div>
 <div id="wrap">
     <!-- Begin page content -->
     <div class="container">
@@ -21,7 +25,7 @@
             <div class="span3">
                 <a id="logo" title="logo" href="/"></a>
             </div>
-            <div class="span9">
+            <div class="span4">
                 <div id="formsearch">
                     <span class="search-icon"></span>
                     <?php echo $this->Form->create('Product', array('type' => 'GET', 'url' => array('controller' => 'products', 'action' => 'search'))); ?>
@@ -33,6 +37,22 @@
                     <?php echo $this->Form->end(); ?>
                 </div>
              </div>
+            <div class="span3">
+                <div class="phones">
+                    <p><img src="/img/phone-call.png"/> 8 (800) <b>2000 500</b></p>
+                    <p><img src="/img/phone-call.png"/> 8 (800) <b>2000 600</b></p>
+                </div>
+            </div>
+            <div class="span2">
+                <div class="row-fluid">
+                    <a href="/shop/cart" class="cart span11">
+                        <h5><img src="/img/cart.png"/>Ваша корзина</h5>
+                        <?= $cartCount; ?> товаров
+                    </a>
+                    <div class="span1"></div>
+                </div>
+            </div>
+
         </div>
         <div id="menu" class="row-fluid">
             <a class="span3" href="/catalog">Каталог товаров</a>
@@ -42,15 +62,20 @@
             <a class="span1" href="/wholesale">Опт</a>
         </div>
         <div id="page-content" class="row-fluid">
-            <? if($this->params['controller'] == 'pages' || $this->params['controller'] == 'products') : ?>
+            <? if($this->params['controller'] == 'pages') : ?>
                 <div class="span3 catalog">
                     <h3>Каталог</h3>
                     <?=$this->Tree->generate($categories, array('element' => 'categories/tree_item', 'class' => 'categorytree', 'id' => 'categorytree')); ?>
                 </div>
+                <div class="span9">
+                    <?= $this->fetch('content'); ?>
+                </div>
+            <? else: ?>
+                <div class="span12">
+                    <?= $this->fetch('content'); ?>
+                </div>
             <? endif; ?>
-            <div class="span9">
-                <?= $this->fetch('content'); ?>
-            </div>
+
         </div>
     </div>
     <div id="push"></div>
