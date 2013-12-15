@@ -26,6 +26,7 @@
 	Router::connect('/payments', array('controller' => 'pages', 'action' => 'payments'));
 	Router::connect('/wholesale', array('controller' => 'pages', 'action' => 'wholesale'));
 	Router::connect('/contacts', array('controller' => 'pages', 'action' => 'contacts'));
+	Router::connect('/catalog', array('controller' => 'products', 'action' => 'index'));
 	Router::connect('/product/:slug', array('controller' => 'products', 'action' => 'view'), array('pass' => array('slug')));
 
 	Router::connect('/brand/:slug', array('controller' => 'brands', 'action' => 'view'), array('pass' => array('slug')));

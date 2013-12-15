@@ -44,7 +44,7 @@
             <a class="span1" href="/wholesale">Опт</a>
         </div>
         <div class="row-fluid page-content">
-            <? if($this->params['controller'] == 'pages') : ?>
+            <? if($this->params['controller'] == 'pages' || $this->params['controller'] == 'products') : ?>
                 <div class="span3 catalog">
                     <h3>Каталог</h3>
                     <?=$this->Tree->generate($categories, array('element' => 'categories/tree_item', 'class' => 'categorytree', 'id' => 'categorytree')); ?>
