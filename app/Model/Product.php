@@ -42,7 +42,7 @@ class Product extends AppModel {
 		'price' => array(
 			'notempty' => array(
 				'rule' => array('decimal'),
-				'message' => 'Price is invalid',
+				'message' => 'Цена долж',
 				//'allowEmpty' => false,
 				//'required' => true,
 				//'last' => false, // Stop validation after this rule
@@ -50,14 +50,10 @@ class Product extends AppModel {
 			),
 		),
 		'weight' => array(
-			'notempty' => array(
-				'rule' => array('decimal'),
-				'message' => 'Weight is invalid',
-				//'allowEmpty' => false,
-				//'required' => true,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
+            'rule1' => array(
+                'rule' => array('decimal'),
+                'message' => 'Вес долже быть числом',
+            )
 		),
 	);
 

@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <?php echo $this->Html->charset(); ?>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><?= $__pageTitle; ?></title>
     <?php
     echo $this->Html->meta('icon');
@@ -19,6 +21,15 @@
     <div class="container">
         <div class="page-header">
             <a id="logo" title="logo" href="/"></a>
+            <?php echo $this->Form->create('Product', array('type' => 'GET', 'url' => array('controller' => 'products', 'action' => 'search'))); ?>
+
+            <?php echo $this->Form->input('search', array('label' => false, 'div' => false, 'class' => 'input-sm', 'autocomplete' => 'off')); ?>
+            <?php echo $this->Form->button('Search', array('div' => false, 'class' => 'btn btn-sm btn-primary')); ?>
+            &nbsp;
+					<span id="cartbutton" style="display:none;">
+					<?php echo $this->Html->link('Shopping Cart', array('controller' => 'shop', 'action' => 'cart'), array('class' => 'btn btn-sm btn-success')); ?>
+					</span>
+            <?php echo $this->Form->end(); ?>
         </div>
         <div id="menu" class="row-fluid">
             <a class="span2" href="/catalog">Каталог</a>
