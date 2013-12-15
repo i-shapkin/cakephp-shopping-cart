@@ -229,9 +229,9 @@ h3{
 }
 .head-body, .head-body a {
     text-shadow: 0 1px 0 #417199;
-    width: 940px;
+    width: 920px;
     margin: 0 auto;
-    padding: 0 10px 0 18px;
+    padding: 0 10px;
     color: #fff;
     text-decoration: none!important;
 }
@@ -246,4 +246,21 @@ h3{
 }
 .this {
     margin: -10px 0 0 16px;
+}
+.frontpage > div {
+    text-align: center;
+    padding: 20px 0 0;
+}
+.frontpage > div img {
+    height: 100px;
+    margin: 0 0 10px;
+}
+.frontpage > div a{
+    display: block;
+    color: #323232;
+}
+.frontpage h3{
+    font-weight: normal;
+    line-height: 32px;
+    margin: 0;
 }
