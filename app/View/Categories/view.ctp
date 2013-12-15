@@ -5,7 +5,7 @@ foreach ($parents as $parent) {
 }
 ?>
 
-<h1><?php echo $category['Category']['name']; ?><small> Category</small></h1>
+<h1><?php echo $category['Category']['name']; ?></h1>
 
 <?php if (!empty($products)): ?>
 

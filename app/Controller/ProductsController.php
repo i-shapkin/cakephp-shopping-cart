@@ -113,7 +113,6 @@ class ProductsController extends AppController {
 				'Product.active' => 1,
 			);
 			foreach($terms as $term) {
-                echo $term;
 				$terms1[] = $term;
 				$conditions[] = array('Product.name LIKE' => '%' . $term . '%');
 			}

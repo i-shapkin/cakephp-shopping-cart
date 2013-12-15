@@ -54,4 +54,20 @@ class PagesController extends AppController {
     public function frontpage() {
         $this->_pageTitle = 'Главная страница';
     }
+
+    public function sale() {
+        $this->_pageTitle = 'Акции и скидки';
+    }
+
+    public function payments() {
+        $this->_pageTitle = 'Доставка и оплата';
+    }
+
+    public function contacts() {
+        $this->_pageTitle = 'Контакты';
+    }
+
+    public function wholesale() {
+        $this->_pageTitle = 'Опт';
+    }
 }

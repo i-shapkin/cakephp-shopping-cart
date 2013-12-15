@@ -33,7 +33,7 @@ App::uses('Controller', 'Controller');
 */
 class AppController extends Controller {
 
-////////////////////////////////////////////////////////////
+    public $uses = array('Category');
 
 	public $components = array(
 		'Session',
@@ -42,11 +42,10 @@ class AppController extends Controller {
 		//'Security',
 	);
     protected $_pageTitle = '';
-    protected $_pageTitlePrefix = 'Кочка | ';
+    protected $_pageTitleSuffix = ' | Кочка';
     protected $_pageSubheader = false;
     protected $_pageHeader = false;
 
-////////////////////////////////////////////////////////////
 
 	public function beforeFilter() {
 		$this->Auth->loginAction = array('controller' => 'users', 'action' => 'login', 'admin' => false);
@@ -66,8 +65,18 @@ class AppController extends Controller {
 				)
 			), 'Form'
 		);
+        $this->loadModel('Category');
+        $categories = $this->Category->find('all', array(
+            'recursive' => -1,
+            'order' => array(
+                'Category.lft' => 'ASC'
+            ),
+            'conditions' => array(
+            ),
+        ));
+        $this->set(compact('categories'));
         //-> Layout data
-        $this->set('__pageTitle', $this->_pageTitlePrefix . $this->_pageTitle);
+        $this->set('__pageTitle', $this->_pageTitle.$this->_pageTitleSuffix);
         $this->set('__pageHeader', $this->_pageHeader);
         $this->set('__pageSubheader', $this->_pageSubheader);
 
@@ -167,7 +176,7 @@ class AppController extends Controller {
         }
 
         //-> Layout data
-        $this->set('__pageTitle', $this->_pageTitlePrefix . $this->_pageTitle);
+        $this->set('__pageTitle', $this->_pageTitle.$this->_pageTitleSuffix);
         $this->set('__pageHeader', $this->_pageHeader);
         $this->set('__pageSubheader', $this->_pageSubheader);
 
