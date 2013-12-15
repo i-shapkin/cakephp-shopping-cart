@@ -17,6 +17,13 @@
     <div class="reg">
         <a href="/registration">Регистрация</a>
     </div>
+    <div class="head-body">
+        <div class="sign">
+            <a href="/login"><img src="/img/login.png" />Вход</a>
+        </div>
+        <strong>Зарегистрируйтесь,</strong> чтобы получить <strong>5% скидку</strong>
+        <img class="this" src="/img/this.png" />
+    </div>
 </div>
 <div id="wrap">
     <!-- Begin page content -->

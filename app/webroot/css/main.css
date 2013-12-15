@@ -19,7 +19,7 @@ body{
     background-image: -webkit-linear-gradient(bottom, #e6f1f5 0%, #047FCB 100%);
     background-image: -ms-linear-gradient(bottom, #e6f1f5 0%, #047FCB 100%);
     background-image: linear-gradient(to bottom, #e6f1f5 0%, #047FCB 100%);
-    padding: 10px 0;
+    padding: 5px 0;
     color: #fff;
 }
 #head-line {
@@ -226,4 +226,24 @@ h3{
 }
 .cart img{
     margin: 0 3px 0 0;
+}
+.head-body, .head-body a {
+    text-shadow: 0 1px 0 #417199;
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 10px 0 18px;
+    color: #fff;
+    text-decoration: none!important;
+}
+.head-body a:hover{
+    text-shadow: none;
+}
+.head-body .sign{
+    float: right;
+}
+.head-body .sign img {
+    margin: -2px 7px 0 0;
+}
+.this {
+    margin: -10px 0 0 16px;
 }
