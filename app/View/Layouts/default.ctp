@@ -93,7 +93,29 @@
 </div>
 <div id="footer">
     <div class="container">
-        <p class="muted credit">Example courtesy <a href="http://martinbean.co.uk">Martin Bean</a> and <a href="http://ryanfait.com/sticky-footer/">Ryan Fait</a>.</p>
+        <div class="row-fluid">
+            <div class="span2">
+                <p><strong>Каталог товаров</strong></p>
+            </div>
+            <div class="span2">
+                <p><strong>Акции и скидки</strong></p>
+            </div>
+            <div class="span2">
+                <p><strong>Доставка и оплата</strong></p>
+            </div>
+            <div class="span2">
+                <p><strong>Контакты</strong></p>
+            </div>
+            <div class="span4">
+                <p>@ 2013 Интернет магазин Ko4ka.com</p>
+                <p><strong>Присоединяйтесь к нам</strong></p>
+                <p>
+                    <a href="http://facebook.com/"><img src="/img/fb.jpg" /></a>
+                    <a href="http://twitter.com/"><img src="/img/tw.png" /></a>
+                    <a href="http://vk.com/"><img src="/img/vk.jpg" /></a>
+                </p>
+            </div>
+        </div>
     </div>
 </div>
     <pre>

@@ -6,6 +6,9 @@ body, html{
 body{
     background: #e5e9ec!important;
 }
+li {
+    list-style-type: none!important;
+}
 #head-line, #menu{
     background-image: -webkit-gradient(
         linear,
@@ -107,9 +110,6 @@ h3{
     font-size: 16px;
     font-weight: normal;
 }
-.categorytree li {
-    list-style-type: none;
-}
 .catalog h3{
     padding-bottom: 0;
     font-weight: normal;
@@ -204,7 +204,7 @@ h3{
 .phones {
     font-weight: normal;
     font-size: 18px;
-    font-style: italic;
+  /*  font-style: italic;*/
 }
 .phones img {
     height: 16px;
@@ -269,4 +269,14 @@ h3{
     font-weight: normal;
     line-height: 32px;
     margin: 0;
+}
+#footer .container {
+    padding: 30px 0 0;
+    width: 940px;
+    color: #fff;
+    margin: 0 auto;
+}
+#footer .container > div:last-child a{
+    display: inline-block;
+    margin: 0 7px 0 0;
 }
