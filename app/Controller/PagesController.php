@@ -46,6 +46,11 @@ class PagesController extends AppController {
      * @throws NotFoundException When the view file could not be found
      *	or MissingViewException in debug mode.
      */
+
+    public function beforeFilter() {
+        parent::beforeFilter();
+    }
+
     public function frontpage() {
         $this->_pageTitle = 'Главная страница';
     }

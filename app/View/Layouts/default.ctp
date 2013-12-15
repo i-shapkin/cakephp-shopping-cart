@@ -19,24 +19,25 @@
 <div id="wrap">
     <!-- Begin page content -->
     <div class="container">
-        <div class="page-header">
-            <a id="logo" title="logo" href="/"></a>
-            <?php echo $this->Form->create('Product', array('type' => 'GET', 'url' => array('controller' => 'products', 'action' => 'search'))); ?>
-
-            <?php echo $this->Form->input('search', array('label' => false, 'div' => false, 'class' => 'input-sm', 'autocomplete' => 'off')); ?>
-            <?php echo $this->Form->button('Search', array('div' => false, 'class' => 'btn btn-sm btn-primary')); ?>
-            &nbsp;
-					<span id="cartbutton" style="display:none;">
-					<?php echo $this->Html->link('Shopping Cart', array('controller' => 'shop', 'action' => 'cart'), array('class' => 'btn btn-sm btn-success')); ?>
-					</span>
-            <?php echo $this->Form->end(); ?>
+        <div class="page-header row-fluid">
+            <a id="logo" class="span4" title="logo" href="/"></a>
+            <div class="span8">
+                <?php echo $this->Form->create('Product', array('type' => 'GET', 'url' => array('controller' => 'products', 'action' => 'search'))); ?>
+                <?php echo $this->Form->input('search', array('label' => false, 'div' => false, 'class' => 'input-sm', 'autocomplete' => 'off')); ?>
+                <?php echo $this->Form->button('Search', array('div' => false, 'class' => 'btn btn-sm btn-primary')); ?>
+                &nbsp;
+                        <span id="cartbutton" style="display:none;">
+                        <?php echo $this->Html->link('Shopping Cart', array('controller' => 'shop', 'action' => 'cart'), array('class' => 'btn btn-sm btn-success')); ?>
+                        </span>
+                <?php echo $this->Form->end(); ?>
+             </div>
         </div>
         <div id="menu" class="row-fluid">
-            <a class="span2" href="/catalog">Каталог</a>
+            <a class="span3" href="/catalog">Каталог товаров</a>
             <a class="span3" href="/sale">Акции и скидки</a>
             <a class="span3" href="/payments">Доставка и оплата</a>
             <a class="span2" href="/contacts">Контакты</a>
-            <a class="span2" href="/wholesale">Опт</a>
+            <a class="span1" href="/wholesale">Опт</a>
         </div>
         <div class="row-fluid page-content">
             <div class="span3 catalog">

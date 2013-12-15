@@ -41,18 +41,14 @@ class AppController extends Controller {
 		//'DebugKit.Toolbar',
 		//'Security',
 	);
-    protected $_pageTitle = 'Главная страница';
+    protected $_pageTitle = '';
     protected $_pageTitlePrefix = 'Кочка | ';
+    protected $_pageSubheader = false;
     protected $_pageHeader = false;
-    protected $_moderateFlash = false;
 
 ////////////////////////////////////////////////////////////
 
 	public function beforeFilter() {
-        //-> Layout data
-        $this->set('__pageTitle', $this->_pageTitlePrefix . $this->_pageTitle);
-        $this->set('__pageHeader', $this->_pageHeader);
-
 		$this->Auth->loginAction = array('controller' => 'users', 'action' => 'login', 'admin' => false);
 		$this->Auth->loginRedirect = array('controller' => 'orders', 'action' => 'index', 'admin' => true);
 		$this->Auth->logoutRedirect = array('controller' => 'products', 'action' => 'index', 'admin' => false);
@@ -70,6 +66,10 @@ class AppController extends Controller {
 				)
 			), 'Form'
 		);
+        //-> Layout data
+        $this->set('__pageTitle', $this->_pageTitlePrefix . $this->_pageTitle);
+        $this->set('__pageHeader', $this->_pageHeader);
+        $this->set('__pageSubheader', $this->_pageSubheader);
 
 		if(isset($this->request->params['admin']) && ($this->request->params['prefix'] == 'admin')) {
 			if($this->Session->check('Auth.User')) {
@@ -159,6 +159,24 @@ class AppController extends Controller {
 		$this->autoRender = false;
 
 	}
+    public function beforeRender() {
+        parent::beforeRender();
+
+        if($this->name == 'CakeError') {
+            $this->layout = false;
+        }
+
+        //-> Layout data
+        $this->set('__pageTitle', $this->_pageTitlePrefix . $this->_pageTitle);
+        $this->set('__pageHeader', $this->_pageHeader);
+        $this->set('__pageSubheader', $this->_pageSubheader);
+
+        //-> User data from session available in View as $__authUser
+        $this->set('__authLoggedIn', $this->Auth->loggedIn() ? true : false);
+
+        $__authUser = $this->Auth->user();
+        $this->set(compact('__authUser'));
+    }
 
 ////////////////////////////////////////////////////////////
 
