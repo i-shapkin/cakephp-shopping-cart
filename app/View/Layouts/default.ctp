@@ -46,9 +46,9 @@
              </div>
             <div class="span3">
                 <div class="phones">
-                    <p><img src="/img/phone-call.png"/> 8 (800) <b>2000 500</b></p>
-                    <p><img src="/img/phone-call.png"/> 8 (800) <b>2000 600</b></p>
-                    <p><a href="/">обратный звонок</a></p>
+                    <p><img src="/img/phone-call.png"/> 8 (800) <strong>2000 500</strong></p>
+                    <p><img src="/img/phone-call.png"/> 8 (800) <strong>2000 600</strong></p>
+                    <p><a href="/">Заказать обратный звонок</a></p>
                 </div>
             </div>
             <div class="span2">
