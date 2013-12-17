@@ -4,7 +4,7 @@ body, html{
     font-size: 13px;
 }
 body{
-    background: #e5e9ec!important;
+    background-color: #e5e9ec!important;
 }
 li {
     list-style-type: none!important;
@@ -269,7 +269,7 @@ h3{
     padding: 20px 0 0;
 }
 .frontpage > div img {
-    height: 100px;
+    height: 80px;
     margin: 0 0 10px;
 }
 .frontpage > div a{
@@ -290,4 +290,7 @@ h3{
 #footer .container > div:last-child a{
     display: inline-block;
     margin: 0 7px 0 0;
+}
+.page-header, #page-content {
+    background: url(../img/bg.jpg) center top repeat-y;
 }
