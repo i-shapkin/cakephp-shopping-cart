@@ -286,12 +286,11 @@ h3{
     width: 940px;
     color: #fff;
     margin: 0 auto;
-    background: #3882c1;
 }
 #footer .container > div:last-child a{
     display: inline-block;
     margin: 0 7px 0 0;
 }
-.container {
+#wrap > .container {
     background: url(../img/bg.jpg) center bottom repeat-y;
 }

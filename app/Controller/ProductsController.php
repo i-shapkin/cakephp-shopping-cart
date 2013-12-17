@@ -40,7 +40,7 @@ class ProductsController extends AppController {
 
 ////////////////////////////////////////////////////////////
 
-	public function products() {
+	public function products($limit=10) {
 
 		$this->Paginator = $this->Components->load('Paginator');
 
@@ -50,7 +50,7 @@ class ProductsController extends AppController {
 				'contain' => array(
 					'Brand'
 				),
-				'limit' => 20,
+				'limit' => $limit,
 				'conditions' => array(
 					'Product.active' => 1,
 					'Brand.active' => 1
