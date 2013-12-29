@@ -124,9 +124,12 @@ h3{
 .page {
     margin: 20px 0;
 }
-.page h3 span{
+.page h3 span, #callback{
     border-bottom: 1px dashed #323232;
     cursor: pointer;
+}
+#callback:hover{
+    text-decoration: none!important;
 }
 .page > .hider {
     display: none;
