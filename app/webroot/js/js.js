@@ -20,4 +20,7 @@ $(document).ready(function(){
                 $(this).closest('#formsearch').find('.search-icon').show();
             }
         });
+    $('.page h3 span').on('click', function(){
+        $(this).parent().next().slideToggle(200);
+    });
 });

@@ -6,6 +6,11 @@ body, html{
 body{
     background-color: #e7e9eb!important;
 }
+h2{
+    line-height: 1;
+    margin: 10px 0;
+    font-weight: normal;
+}
 li {
     list-style-type: none!important;
 }
@@ -110,11 +115,54 @@ h3{
     font-size: 16px;
     font-weight: normal;
 }
-.catalog h3{
+.catalog h3, .page h3{
     padding-bottom: 0;
     font-weight: normal;
     margin: 0;
     line-height: 1;
+}
+.page {
+    margin: 20px 0;
+}
+.page h3 span{
+    border-bottom: 1px dashed #323232;
+    cursor: pointer;
+}
+.page > .hider {
+    display: none;
+}
+.page > .hider.first{
+    display: block;
+}
+dl {
+    margin: 0 0 10px 20px!important;
+}
+.page h3 {
+    padding: 10px 0;
+    margin: 0 0 10px 0;
+    border-bottom: 1px solid #bfbfbf;
+}
+.page p, .page dl dd{
+    text-align: justify;
+    text-indent: 20px;
+    line-height: 25px;
+}
+.page dl dt{
+    font-style: italic;
+    line-height: normal;
+    padding-bottom: 5px;
+}
+.page dl dt.padding{
+    padding-top: 10px;
+}
+.page dl dd {
+    color: #555555;
+    margin: 0 0 0 10px;
+    text-indent: 0;
+    font-style: italic;
+}
+.page h3, .page p{
+    text-indent: 20px;
 }
 #categorytree {
     margin: 20px 0;
