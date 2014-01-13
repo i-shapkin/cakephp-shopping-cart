@@ -11,6 +11,15 @@
             <div class="pname"><?php echo $this->Html->link($product['Product']['name'], array('controller' => 'products', 'action' => 'view', 'slug' => $product['Product']['slug'])); ?></div>
             <div class="pcategory"><?=$product['Category']['name']?></div>
             <div class="pprice"><strong><?php echo $product['Product']['price']; ?> руб.</strong></div>
+            <div class="pcard">
+                <form action="/shop/add" id="ProductViewForm" method="post" accept-charset="utf-8">
+                    <div style="display:none;">
+                        <input type="hidden" name="_method" value="POST">
+                    </div>
+                    <input type="hidden" name="data[Product][id]" value="<?=$product['Product']['id']?>" id="ProductId">
+                    <button class="btn btn-primary addtocart" id="<?=$product['Product']['id']?>" type="submit">В корзину</button>
+                </form>
+            </div>
         </div>
     </div>
     <?php

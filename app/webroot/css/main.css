@@ -387,3 +387,12 @@ dl {
 .pprice {
     color: #333;
 }
+.page #ProductViewForm{
+    margin: 0;
+}
+.pcard {
+    display: none;
+}
+.element:hover .pcard {
+    display: block;
+}
