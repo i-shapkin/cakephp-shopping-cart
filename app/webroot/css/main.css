@@ -11,6 +11,9 @@ h2{
     margin: 10px 0;
     font-weight: normal;
 }
+h4{
+    font-weight: normal;
+}
 li {
     list-style-type: none!important;
 }
@@ -347,4 +350,40 @@ dl {
 }
 #wrap > .container {
     background: url(../img/bg.jpg) center bottom repeat-y;
+}
+.catalog .span3 .element {
+    width: 80%;
+    padding: 10%;
+    background: #fff;
+    text-align: center;
+    box-shadow: 0 0 10px grey;
+}
+.catalog .span3 .element > div {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-align: left;
+    margin: 10px 0 0;
+}
+
+.catalog .element-products {
+    border-bottom: 1px solid #bfbfbf;
+}
+.catalog .row{
+    margin:0 0 20px;
+}
+.paginate {
+    text-align: center;
+}
+.pname {
+    font-size: 16px;
+}
+.pprice {
+    font-size: 17px;
+}
+.pcategory {
+    color: #777;
+}
+.pprice {
+    color: #333;
 }

@@ -48,7 +48,7 @@ class ProductsController extends AppController {
 			'Product' => array(
 				'recursive' => -1,
 				'contain' => array(
-					'Brand'
+					'Brand', 'Category'
 				),
 				'limit' => $limit,
 				'conditions' => array(
